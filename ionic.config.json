@@ -1,0 +1,7 @@
+{
+  "name": "ionic-cource",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

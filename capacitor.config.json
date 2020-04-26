@@ -1,0 +1,14 @@
+{
+  "appId": "com.ionic.cource",
+  "appName": "ionic-cource",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {},
+  "server": {
+    "url": "http://192.168.1.3:4200",
+    "cleartext": true,
+    "originalUrl": "http://localhost:8101",
+    "originalCleartext": true
+  }
+}

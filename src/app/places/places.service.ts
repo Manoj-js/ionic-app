@@ -21,7 +21,7 @@ export class PlacesService {
       1500
     ),
     new Place(
-      'p2',
+      'p3',
       'Oyo OMR',
       'Best place in omr',
       'https://skift.com/wp-content/uploads/2019/11/oyo-rooms-.jpg',

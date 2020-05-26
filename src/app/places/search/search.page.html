@@ -8,6 +8,10 @@
 </ion-header>
 
 <ion-content>
+  <ion-segment value="all" (ionChange)="segmentUpdate($event)">
+    <ion-segment-button value="all" checked >All Places</ion-segment-button>
+    <ion-segment-button value="couple">Couple Friendly</ion-segment-button>
+  </ion-segment>
 <ion-grid>
   <ion-row>
     <ion-col size="12" size-sm="8" offset-sm="2" class="ion-text-center">
@@ -32,17 +36,22 @@
   </ion-row> 
   <ion-row>
     <ion-col size="12" size-sm="8" offset-sm="2" class="ion-text-center">
-<ion-list>
-  <ion-item *ngFor="let place of loadedPlaces.slice(1)" detail   [routerLink]="['/','places','tabs','search', place.id] ">
-<ion-thumbnail slot="start">
+<ion-virtual-scroll [items]="otherPlaces" >
+
+  <ion-item 
+  *virtualItem="let place" 
+   detail  
+   approxItemGeight="70px"
+    [routerLink]="['/','places','tabs','search', place.id] ">
+<ion-avatar slot="start">
 <ion-img [src]="place.imageUrl"></ion-img>
-</ion-thumbnail>
+</ion-avatar>
 <ion-label>
   <h2>{{place.title}}</h2>
   <p>{{place.description}}</p>
 </ion-label>
   </ion-item>
-</ion-list>
+</ion-virtual-scroll>
     </ion-col>
   </ion-row>
 </ion-grid>

@@ -7,7 +7,7 @@
 <ion-content class="ion-padding ion-margin">
   <ion-button color="primary" (click)="onLogin()">
     <ion-icon slot="start" name="aperture-outline"></ion-icon>
-    <ion-label>Login</ion-label>
+    <ion-label *ngIf="!isLoading">Login</ion-label>
   </ion-button>
 
 </ion-content>
